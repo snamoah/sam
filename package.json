@@ -1,0 +1,16 @@
+{
+  "name": "create-es6-module",
+  "version": "0.0.1",
+  "description": "Command line tool for creating es6 npm packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "es6",
+    "npm",
+    "generators"
+  ],
+  "author": "Samuel Amoah <snamoah@gmail.com> (https://snamoah.github.io)",
+  "license": "ISC"
+}
