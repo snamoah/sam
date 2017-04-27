@@ -12,5 +12,11 @@
     "generators"
   ],
   "author": "Samuel Amoah <snamoah@gmail.com> (https://snamoah.github.io)",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "create-es6-module": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }
