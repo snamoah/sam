@@ -5,7 +5,7 @@ A simple command-line tool to generate es6 boilerplate npm packages. I've lately
 # Install
 
 ```bash
-> npm install -g sam
+> npm install -g samm
 ```
 
 
@@ -13,7 +13,7 @@ A simple command-line tool to generate es6 boilerplate npm packages. I've lately
 
 ```
 
-sam [command] <generator>
+samm [command] <generator>
 
 Commands:
 
@@ -32,7 +32,7 @@ Options:
 Here's an example for creating an npm package
 
 ```bash
-> sam g es6
+> samm g es6
 ```
 
 ## Generators
