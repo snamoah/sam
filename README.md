@@ -15,8 +15,8 @@ A simple command-line tool to generate es6 boilerplate npm packages. I've lately
 
 sam [command] <generator>
 
-Commands: 
-  
+Commands:
+
   g     generate boilerplate configuration files for es6, meteorjs, etc...
   help  display help for a specific command
 
@@ -40,3 +40,7 @@ Here's an example for creating an npm package
 **es6** - This option generates a boilerplate npm package either in your current working directory or in a directory you specify. It also generates `.npmignore`, `.eslintrc`, `.gitignore`, `.editorconfig` files in the project directory.
 
 **basic** - Generates `.eslintrc`, `.gitignore`, `.editorconfig` for a project.
+
+**npmignore** - adds a `.npmignore` file to your project directory.
+
+**gitignore** - adds a `.gitignore` file to your project directory.
