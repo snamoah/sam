@@ -17,6 +17,11 @@
     "create-es6-module": "./index.js"
   },
   "dependencies": {
-    "commander": "^2.9.0"
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.9.0",
+    "ejs": "^2.5.6",
+    "path": "^0.12.7",
+    "shelljs": "^0.7.7"
   }
 }
