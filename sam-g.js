@@ -43,14 +43,14 @@ funciton generateGitIgnore() {
 }
 
 function copy(source, destination) {
-  var sourcePath = path.join(__dirname, 'files/' + source); 
+  var sourcePath = path.join(__dirname, 'files/' + source);
   var destinationPath = path.join(modulePath, destination);
   fs.writeFileSync(destinationPath, fs.readFileSync(sourcePath));
 }
 
 function template(file, data) {
   var source = path.join(__dirname, file);
-  var sourceFile = fs.readFileSync(source, 'utf-8'); 
+  var sourceFile = fs.readFileSync(source, 'utf-8');
   return ejs.render(sourceFile, data);
 }
 
@@ -95,9 +95,9 @@ function promptUser() {
 
 };
 
-exports = Generator = {
+Generator = {
   es6: function es6() {
-    promptUser();      
+    promptUser();
   },
 
   basic: function basic() {
