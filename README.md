@@ -4,14 +4,14 @@ A simple command-line tool to generate es6 boilerplate npm packages. I've lately
 
 # Install
 
-```
-$ npm install -g sam
+```bash
+> npm install -g sam
 ```
 
 
 ## Usage
 
-```bash
+```
 
 sam [command] <generator>
 
@@ -21,7 +21,8 @@ Commands:
   help  display help for a specific command
 
 Options:
- -h   help
+
+  -h   help
 
 ```
 
@@ -30,11 +31,12 @@ Options:
 
 Here's an example for creating an npm package
 
-```
-$ sam g es6
+```bash
+> sam g es6
 ```
 
 ## Generators
 
-*es6* - This option generates a boilerplate npm package either in your current working directory or in a directory you specify
-*basic* - Genrates .eslintrc, .gitignore, .editorconfig for a project
+**es6** - This option generates a boilerplate npm package either in your current working directory or in a directory you specify. It also generates `.npmignore`, `.eslintrc`, `.gitignore`, `.editorconfig` files in the project directory.
+
+**basic** - Generates `.eslintrc`, `.gitignore`, `.editorconfig` for a project.
