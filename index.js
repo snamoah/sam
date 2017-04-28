@@ -2,11 +2,10 @@
 
 var program = require('commander');
 
+// commander prompt
 program
-  .arguments('<module_name>')
-  .action(createES6Module)
+  .command('g', 'generate boilerplate configuration files for es6, meteorjs, etc...')
   .parse(process.argv);
 
-function createES6Module(moduleName) {
-  console.log('Module name', moduleName);
-};
+
+

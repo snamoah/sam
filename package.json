@@ -1,6 +1,6 @@
 {
-  "name": "create-es6-module",
-  "version": "0.0.1",
+  "name": "sam",
+  "version": "1.0.0",
   "description": "Command line tool for creating es6 npm packages",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,14 @@
   "author": "Samuel Amoah <snamoah@gmail.com> (https://snamoah.github.io)",
   "license": "ISC",
   "bin": {
-    "create-es6-module": "./index.js"
+    "sam": "./index.js"
   },
   "dependencies": {
-    "commander": "^2.9.0"
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.9.0",
+    "ejs": "^2.5.6",
+    "path": "^0.12.7",
+    "shelljs": "^0.7.7"
   }
 }
