@@ -37,5 +37,6 @@ Here's an example for creating an npm package
 
 ## Generators
 
-*es6* - This option generates a boilerplate npm package either in your current working directory or in a directory you specify
-*basic* - Genrates .eslintrc, .gitignore, .editorconfig for a project
+**es6** - This option generates a boilerplate npm package either in your current working directory or in a directory you specify. It also generates `.npmignore`, `.eslintrc`, `.gitignore`, `.editorconfig` files in the project directory.
+
+**basic** - Generates `.eslintrc`, `.gitignore`, `.editorconfig` for a project.
