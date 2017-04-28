@@ -34,6 +34,14 @@ function generateBasicConfig() {
   copy('gitignore', '.gitignore');
 }
 
+function generateNpmIgnore() {
+  copy('npmignore', '.npmignore');
+}
+
+funciton generateGitIgnore() {
+  copy('gitignore', '.gitignore');
+}
+
 function copy(source, destination) {
   var sourcePath = path.join(__dirname, 'files/' + source); 
   var destinationPath = path.join(modulePath, destination);
@@ -94,6 +102,16 @@ exports = Generator = {
 
   basic: function basic() {
     generateBasicConfig();
+    process.exit();
+  },
+
+  npmignore: function npmignore() {
+    generateNpmIgnore();
+    process.exit();
+  },
+
+  gitignore: function gitignore() {
+    generateGitIgnore();
     process.exit();
   }
 };
