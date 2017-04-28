@@ -20,6 +20,9 @@ function createModule() {
   createDirs();
   createConfigFiles();
   createPackageJsonFile();
+
+  console.log('Running `npm install` in directory ...');
+  runNpmInstall();
 };
 
 function createConfigFiles() {
@@ -41,6 +44,15 @@ function generateNpmIgnore() {
 function generateGitIgnore() {
   copy('gitignore', '.gitignore');
 }
+
+function runNpmInstall() {
+  if (modulePath == process.cwd()) {
+    $.exec('npm install');
+  } else {
+    $.cd(modulePath);
+    $.exec('npm install');
+  }
+};
 
 function copy(source, destination) {
   var sourcePath = path.join(__dirname, 'files/' + source);
