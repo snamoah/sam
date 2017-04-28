@@ -1,6 +1,6 @@
 {
   "name": "sam",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Command line tool for creating es6 npm packages",
   "main": "index.js",
   "scripts": {
