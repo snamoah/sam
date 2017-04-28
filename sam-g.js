@@ -38,7 +38,7 @@ function generateNpmIgnore() {
   copy('npmignore', '.npmignore');
 }
 
-funciton generateGitIgnore() {
+function generateGitIgnore() {
   copy('gitignore', '.gitignore');
 }
 
