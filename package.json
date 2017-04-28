@@ -1,16 +1,24 @@
 {
   "name": "sam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Command line tool for creating es6 npm packages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/snamoah/sam",
+  "bugs": {
+    "url": "https://github.com/snamoah/sam/issues"
   },
   "keywords": [
     "es6",
     "npm",
     "generators"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snamoah/sam.git"
+  },
   "author": "Samuel Amoah <snamoah@gmail.com> (https://snamoah.github.io)",
   "license": "ISC",
   "bin": {
