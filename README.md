@@ -4,14 +4,14 @@ A simple command-line tool to generate es6 boilerplate npm packages. I've lately
 
 # Install
 
-```
-$ npm install -g sam
+```bash
+> npm install -g sam
 ```
 
 
 ## Usage
 
-```bash
+```
 
 sam [command] <generator>
 
@@ -21,7 +21,8 @@ Commands:
   help  display help for a specific command
 
 Options:
- -h   help
+
+  -h   help
 
 ```
 
@@ -30,8 +31,8 @@ Options:
 
 Here's an example for creating an npm package
 
-```
-$ sam g es6
+```bash
+> sam g es6
 ```
 
 ## Generators
