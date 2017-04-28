@@ -28,6 +28,7 @@ function createConfigFiles() {
   copy('eslintrc', '.eslintrc');
   copy('gitignore', '.gitignore');
   copy('npmignore', '.npmignore');
+  copy('editorconfig', '.editorconfig');
 }
 
 function copy(source, destination) {
