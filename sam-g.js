@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node --harmony
 
 var program = require('commander'),
   $ = require('shelljs'),
