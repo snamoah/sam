@@ -1,6 +1,6 @@
 {
   "name": "samm",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Command line tool for creating es6 npm packages",
   "main": "index.js",
   "scripts": {
