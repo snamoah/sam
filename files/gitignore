@@ -26,7 +26,6 @@ npm-debug.log
 .iml
 *.sublime-workspace
 *.sublime-project
-.npm
 
 .DS_Store*
 ehthumbs.db
