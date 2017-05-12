@@ -19,7 +19,7 @@
   "scripts": {
     "prepublish": "npm run compile",
     "test": "npm run compile && node_modules/.bin/tape test/*.js",
-    "compile": "babel --out-dir dist lib/**.js",
+    "compile": "babel lib --out-dir dist --copy-files",
     "lint": "eslint lib"
   },
   "main": "./dist/lib"

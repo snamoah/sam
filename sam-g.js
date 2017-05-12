@@ -46,12 +46,11 @@ function generateGitIgnore() {
 }
 
 function runNpmInstall() {
-  if (modulePath == process.cwd()) {
-    $.exec('npm install');
-  } else {
+  if (modulePath != process.cwd()) {
     $.cd(modulePath);
-    $.exec('npm install');
   }
+
+  $.exec('npm install');
 };
 
 function copy(source, destination) {
@@ -129,8 +128,27 @@ Generator = {
 };
 
 program
+  .usage('<generator>')
   .arguments('<generator>', 'generator type [ es6, basic ]')
   .action(function(type) {
     Generator[type] && Generator[type]();
-  })
-  .parse(process.argv);
+  });
+
+program.on('--help', function() {
+  console.log('  Generators:');
+  console.log('');
+  console.log('     es6         Use this to generate an es6 npm module');
+  console.log('     basic       Use this to generate gitignore, npmignore, \
+eslintrc config files');
+  console.log('     gitignore   Use this to generate a gitignore config file');
+  console.log('     npmignore   Use this to generate a npmignore config file');
+  console.log('');
+  console.log('  Examples:');
+  console.log('');
+  console.log('     $ sam g es6');
+  console.log('     $ sam g basic');
+  console.log('');
+});
+
+program.parse(process.argv);
+
