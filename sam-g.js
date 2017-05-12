@@ -46,12 +46,11 @@ function generateGitIgnore() {
 }
 
 function runNpmInstall() {
-  if (modulePath == process.cwd()) {
-    $.exec('npm install');
-  } else {
+  if (modulePath != process.cwd()) {
     $.cd(modulePath);
-    $.exec('npm install');
   }
+
+  $.exec('npm install');
 };
 
 function copy(source, destination) {
