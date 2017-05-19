@@ -13,7 +13,8 @@ var defaultModuleName = path.basename(process.cwd()),
   moduleName = '',
   author = '',
   description = '',
-  modulePath = '';
+  modulePath = '',
+  keywords;
 
 
 function createModule() {
@@ -70,7 +71,8 @@ function createPackageJsonFile() {
   var pkgJsonFile = template('files/_package.json', {
     modulename: moduleName,
     description: description,
-    author: author
+    author: author,
+    keywords: keywords,
   });
 
   var destinationPath = path.join(modulePath, 'package.json');
@@ -87,6 +89,7 @@ function promptUser() {
     moduleName = yield prompt('name(' + defaultModuleName + '): ');
     description = yield prompt('description: ');
     author = yield prompt('author: ');
+    keywords = yield prompt('keywords: ');
 
 
     moduleName = moduleName || defaultModuleName;
@@ -106,7 +109,7 @@ function promptUser() {
 
 };
 
-Generator = {
+var Generator = {
   es6: function es6() {
     promptUser();
   },
