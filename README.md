@@ -1,6 +1,6 @@
 # Sam G command line tool
 
-A simple command-line tool to generate es6 boilerplate npm packages. I've lately been creating a lot of npm packages and having to go through the process of installing eslint, babel and the likes became very frustrating so decided to build this simple tool.
+A simple command-line tool to generate es6 boilerplate npm packages. I've lately been creating a lot of npm packages and having to go through the process of installing eslint, babel and the likes became very frustrating so decided to build this simple tool. It's also compatible with npm git repositories. It handles all the babel stuff from es6 for you either from the main npm repository or from github.
 
 # Install
 
