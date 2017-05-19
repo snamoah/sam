@@ -25,7 +25,7 @@
     "test": "npm run compile && tape test/*.js",
     "compile": "npm run lint && babel lib --out-dir dist --copy-files",
     "lint": "eslint lib",
-    "postinstall": "npm run compile"
+    "postinstall": "babel lib --out-dir dist --copy-files"
   },
   "main": "dist/index.js"
 }
