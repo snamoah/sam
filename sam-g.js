@@ -91,9 +91,18 @@ function promptUser() {
     author = yield prompt('author: ');
     keywords = yield prompt('keywords: ');
 
+    // keyword is a comma-separated string
+    keywords = keywords
+      .trim()
+      .split(',')
+      .filter(function(i) {
+        return !!i;
+      });
 
     moduleName = moduleName || defaultModuleName;
-    modulePath = path.basename(process.cwd())  == moduleName ? process.cwd() : path.join(process.cwd(), moduleName);
+    modulePath = path.basename(process.cwd())  == moduleName
+      ? process.cwd()
+      : path.join(process.cwd(), moduleName);
 
     //create directory if user doesn't want to use current directory
     if (process.cwd() !== modulePath) {
