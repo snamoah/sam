@@ -14,6 +14,7 @@ var defaultModuleName = path.basename(process.cwd()),
   author = '',
   description = '',
   modulePath = '',
+  command,
   keywords;
 
 
@@ -73,6 +74,7 @@ function createPackageJsonFile() {
     description: description,
     author: author,
     keywords: keywords,
+    bin: command,
   });
 
   var destinationPath = path.join(modulePath, 'package.json');
@@ -84,12 +86,14 @@ function createDirs() {
   $.cp(path.join(__dirname, 'files/index.js'), path.join(modulePath, 'lib'));
 }
 
-function promptUser() {
+function promptUser(opts) {
+  var hasBin = opts && opts.hasBin;
   co(function *() {
     moduleName = yield prompt('name(' + defaultModuleName + '): ');
     description = yield prompt('description: ');
     author = yield prompt('author: ');
     keywords = yield prompt('keywords: ');
+    command = hasBin ? yield prompt('Command: ') : '';
 
     // keyword is a comma-separated string
     keywords = keywords
@@ -136,7 +140,11 @@ var Generator = {
   gitignore: function gitignore() {
     generateGitIgnore();
     process.exit();
-  }
+  },
+
+  cmd: function cmd() {
+    promptUser({ hasBin: true });
+  },
 };
 
 program
